@@ -72,7 +72,7 @@ public class MemoryGame{
             }
         }
         // delay time can be reduced, more tiles can be added
-        System.out.println("your retarted lol");
+        //System.out.println("your retarted lol");
         int initial = 3;
         int ending = 13;
         int rounds = 0;
