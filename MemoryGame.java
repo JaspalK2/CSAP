@@ -55,9 +55,12 @@ public class MemoryGame{
       }
     public void V2() {
         String[] memString = new String[13];
+        // defining a string with 13 letters
         if(isRand == true){
             String[] rand = new String[13];
+            // creating a new string with the same length
             int randNumGen[] = RandomPermutation.next(13);
+            
             for(int i = 0; i< randNumGen.length;i++){
                 randNumGen[i] -=1;
             }

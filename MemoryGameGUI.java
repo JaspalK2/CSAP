@@ -147,7 +147,12 @@ public class MemoryGameGUI extends JFrame
 
     return seq;
   }
-
+  public Integer numRounds(){
+    JFrame frame = new JFrame();
+    String seq = JOptionPane.showInputDialog(frame, "How many rounds would you like to play?");
+    int num = Integer.parseInt(seq);
+     return num;
+  }
   /**
    * Shows a message that the user matched the sequence
    */
