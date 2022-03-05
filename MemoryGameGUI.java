@@ -147,6 +147,10 @@ public class MemoryGameGUI extends JFrame
 
     return seq;
   }
+  /**
+   * Prompts the User on how many rounds they would like to play
+   * @num stores the value of this and returns it back
+   */
   public Integer numRounds(){
     JFrame frame = new JFrame();
     String seq = JOptionPane.showInputDialog(frame, "How many rounds would you like to play?");
@@ -165,6 +169,7 @@ public class MemoryGameGUI extends JFrame
    * Asks the user if they want to play another round of the game.
    * 
    * @return true to continue playing, false to quit 
+   * 
    */
   public boolean playAgain()
   {
@@ -173,13 +178,18 @@ public class MemoryGameGUI extends JFrame
       return true;
     return false;
   }
+  /**
+   * Prompts the player whether or not they want to play the Hard verision of the Memory Game
+   */
   public boolean Easy_Hard()
   {
     int n = JOptionPane.showConfirmDialog(this, "Do you want to play the hard mode of this game?", "Memory Game", JOptionPane.YES_NO_OPTION);
     if (n == JOptionPane.YES_OPTION )
       return true;
     return false;
-  }
+  }/**
+   * Prompts User to choose on whether they would like the time to decrease as the individual Rounds between the games progress
+   */
   public boolean ChangeTime()
   {
     int n = JOptionPane.showConfirmDialog(this, "Do you want to have a shorter amount of time as the game progresses?", "Memory Game", JOptionPane.YES_NO_OPTION);
@@ -187,6 +197,9 @@ public class MemoryGameGUI extends JFrame
       return true;
     return false;
   }
+  /**
+   * Prompts User on whether they would like to have the times randomized, this is the boolean input that the createboard function will take
+   */
   public boolean isRand()
   {
     int n = JOptionPane.showConfirmDialog(this, "Do you want to have the tiles randomized for this game??", "Memory Game", JOptionPane.YES_NO_OPTION);
@@ -194,6 +207,9 @@ public class MemoryGameGUI extends JFrame
       return true;
     return false;
   }
+  /**
+   * Prompts User on whether thyw want the letters themselves changed so that they could have a more randomized and non-patternistic expirience as they continue playing
+   */
   public boolean isRand2()
   {
     int n = JOptionPane.showConfirmDialog(this, "Do you want to have the WORDS randomized for this game??", "Memory Game", JOptionPane.YES_NO_OPTION);
@@ -215,9 +231,11 @@ public class MemoryGameGUI extends JFrame
   }
   
   /**
-   * Shows a "try again" message.
+   * Shows the end message where it will interate through all the games that you played over time and it will determine which game was the best based on the percent accuracy that the player had
+   *   the parameters are Double arr[][], int n
    */
   
+
   public void conclusion(Double arr[][], int n)
   {
     JOptionPane.showMessageDialog(this, "int total, you completed " + n + " different games " , "Game Report", JOptionPane.PLAIN_MESSAGE);

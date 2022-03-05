@@ -16,6 +16,11 @@ public class plotMaker extends Application {
     public static Double num2;
     public static double intercept;
     public static double slope;
+    /**
+   * takes in two lists to determine the overall correlation that the player had throughout the rounds based on their score vs rounds
+   * @param xs will store the x array of values
+   * @param ys will store the y array of values
+   */
     public static double Correlation(int[] xs, int[] ys) {
         //TODO: check here that arrays are not null, of the same length etc
     
@@ -48,7 +53,10 @@ public class plotMaker extends Application {
         // correlation is just a normalized covariation
         return cov / sigmax / sigmay;
       }
-    @Override public void start(Stage stage) {
+    /**
+   * This method will start the prodcution of the data using series for the scatter graph, it will use an Axis naming mechanisim, a series adding forloop with the data lists, and finally at the end it will save this all and display a plot when the "launch(args) command is played in the main function"
+   */
+      @Override public void start(Stage stage) {
         
         stage.setTitle("Scatter Chart Sample");
         final NumberAxis xAxis = new NumberAxis(0, num*2, 1);
@@ -83,7 +91,10 @@ public class plotMaker extends Application {
         stage.show();
     }
    
- 
+ /**
+   * This function will run the entire program, here it will run through all prefeerences that the user may want to select such as the easy or hard game mode, or the randomized words game mode, it will finally take all this, store it in a 2d array with the score and the rounds, and run the plot graph function along with the correaltion function to label the plot
+   * 
+   */
     public static void main(String[] args) {
         MemoryGameGUI x = new MemoryGameGUI();
         boolean isHard = x.Easy_Hard();
