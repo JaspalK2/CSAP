@@ -102,6 +102,10 @@ public class MemoryGame{
                 String response = x.playSequence(rand, 0.5);
                 boolean doesMatch = true;
                 for(int i =0; i< rand.length;i++){
+                    if(rand.length != response.length()){
+                       doesMatch = false;
+                       break;
+                    }
                     if (!(rand[i].equals(response.substring(i,i+1)))){
                         doesMatch  =false;
                         break;

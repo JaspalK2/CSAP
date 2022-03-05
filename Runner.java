@@ -1,4 +1,6 @@
+
 public class Runner{
+   
     public static void main(String[] args) {
        
        
@@ -26,6 +28,7 @@ public class Runner{
            
         }
         else{
+
             MemoryGame y = new MemoryGame();
             
             int j = 0;
@@ -43,8 +46,8 @@ public class Runner{
             
         }
         x.conclusion(Percentage, numRounds);
-
-       
-
+        
+        
     }
+    
 }

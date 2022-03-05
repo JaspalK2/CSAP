@@ -217,6 +217,7 @@ public class MemoryGameGUI extends JFrame
   /**
    * Shows a "try again" message.
    */
+  
   public void conclusion(Double arr[][], int n)
   {
     JOptionPane.showMessageDialog(this, "int total, you completed " + n + " different games " , "Game Report", JOptionPane.PLAIN_MESSAGE);
