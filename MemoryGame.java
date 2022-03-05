@@ -82,7 +82,7 @@ public class MemoryGame{
         boolean isDelay = x.ChangeTime();
         boolean y = x.isRand();
         boolean isPlay = true;
-        double delay = 0.5;
+        double delay = 0.4;
         
         while(isPlay && initial <= ending){
             if(isDelay){
